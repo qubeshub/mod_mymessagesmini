@@ -30,7 +30,7 @@
  * @license   http://opensource.org/licenses/MIT MIT
  */
 
-namespace Modules\MyMessages;
+namespace Modules\MyMessagesMini;
 
 use Hubzero\Module\Module;
 use Hubzero\Message\Recipient;
@@ -52,7 +52,7 @@ class Helper extends Module
 	{
 		if (!Plugin::isEnabled('members', 'messages'))
 		{
-			$this->setError(Lang::txt('MOD_MYMESSAGES_REQUIRED_PLUGIN_DISABLED'));
+			$this->setError(Lang::txt('MOD_MYMESSAGESMINI_REQUIRED_PLUGIN_DISABLED'));
 		}
 		else
 		{

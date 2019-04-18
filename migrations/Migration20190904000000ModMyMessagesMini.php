@@ -5,14 +5,14 @@ use Hubzero\Content\Migration\Base;
 /**
  * Migration script for installing mymessages module
  **/
-class Migration20190109000000ModMyMessages extends Base
+class Migration20190904000000ModMyMessagesMini extends Base
 {
 	/**
 	 * Up
 	 **/
 	public function up()
 	{
-		$this->addModuleEntry('mod_mymessages');
+		$this->addModuleEntry('mod_mymessagesmini');
 	}
 
 	/**
@@ -20,6 +20,6 @@ class Migration20190109000000ModMyMessages extends Base
 	 **/
 	public function down()
 	{
-		$this->deleteModuleEntry('mod_mymessages');
+		$this->deleteModuleEntry('mod_mymessagesmini');
 	}
 }

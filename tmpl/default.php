@@ -32,8 +32,15 @@
 
 // no direct access
 defined('_HZEXEC_') or die();
+?>
+<li id="account-messages">
+	  <a class="component-button"><span class="nav-icon-groups"><?php echo file_get_contents(PATH_CORE . DS . "assets/icons/envelope.svg") ?></span><span>My Messages</span><span class="nav-icon-more"><?php echo file_get_contents(PATH_CORE . DS . "assets/icons/chevron-right.svg") ?></span></a>
+	  <div class="component-panel">
+	    <header><h2>My Messages</h2></header>
+	    <a class="component-button"><span class="nav-icon-back"><?php echo file_get_contents(PATH_CORE . DS . "assets/icons/chevron-left.svg") ?></span>Back</a>
+	      <div<?php echo ($this->moduleclass) ? ' class="' . $this->moduleclass . '"' : '';?>>
 
-if ($this->getError())
+<?php if ($this->getError())
 {
 	echo '<p class="error">' . $this->getError() . '</p>' . "\n";
 }
@@ -42,7 +49,8 @@ else
 	// Push the module CSS to the template
 	$this->css();
 	?>
-	<div<?php echo ($this->moduleclass) ? ' class="' . $this->moduleclass . '"' : ''; ?>>
+
+<div<?php echo ($this->moduleclass) ? ' class="' . $this->moduleclass . '"' : ''; ?>>
 		<ul class="module-nav">
 			<li><a class="icon-email-alt" href="<?php echo Route::url('index.php?option=com_members&id=' . User::get('id') . '&active=messages'); ?>"><?php echo Lang::txt('MOD_MYMESSAGES_ALL_MESSAGES'); ?></a></li>
 			<li><a class="icon-plus" href="<?php echo Route::url('index.php?option=com_members&id=' . User::get('id') . '&active=messages&task=settings'); ?>"><?php echo Lang::txt('MOD_MYMESSAGES_MESSAGE_SETTINGS'); ?></a></li>
@@ -87,4 +95,7 @@ else
 		<?php } ?>
 	</div>
 	<?php
-}
+}?>
+  </div>
+ </div>
+</li>
